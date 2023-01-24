@@ -64,7 +64,7 @@
     </div>
     
 <div class=" btnbox position-absolute  start-50 translate-middle">
-    <a href="events"><button style="--content: 'REGISTER';" >
+    <a href="events"><button class="btn" style="--content: 'REGISTER';" >
         <div class="left"></div> 
           REGISTER
         <div class="right"></div>
@@ -87,21 +87,7 @@
   
   @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-body {
-  width: 100%;
-  height: 100vh;
-  background: #001122;
-  display: grid;
-  place-items: center;
-  
-  
-  
-}
+
 .loader {
   font-family: "Poppins", sans-serif;
   font-size: 5vw;
@@ -189,7 +175,7 @@ html, body {
   background-color: var(--bg-color);
 }
 
-button {
+.btn {
   position:relative;
   padding: 10px 20px;  
   border: none;
@@ -209,12 +195,12 @@ button {
   overflow: hidden;   
 }
 
-button:focus {
+.btn:focus {
   outline-color: transparent;
   box-shadow: var(--btn-color) 2px 2px 22px;
 }
 
-.right::after, button::after {
+.right::after, .btn::after {
   content: var(--content);
   display: block;
   position: absolute;
@@ -223,7 +209,7 @@ button:focus {
   pointer-events:none;
 }
 
-button::after{
+.btn::after{
   font-weight: 200;
   top: -30px;
   left: -20px;
@@ -251,20 +237,20 @@ button::after{
   transform: translate(0, -90%) rotate(0deg)
 }
 
-button:hover .right::after {
+.btn:hover .right::after {
   transform: translate(0, -47%) rotate(0deg)
 }
 
-button .right:hover::after {
+.btn .right:hover::after {
   transform: translate(0, -50%) rotate(-7deg)
 }
 
-button .left:hover ~ .right::after {
+.btn .left:hover ~ .right::after {
   transform: translate(0, -50%) rotate(7deg)
 }
 
 /* bubbles */
-button::before {
+.btn::before {
   content: '';
   pointer-events: none;
   opacity: .6;
@@ -337,11 +323,7 @@ button::before {
   background-color: rgba(255,255,255,0);
 }
 
-.got{
-    font-size: 10vw;
-    font-family: 'Lilita One', cursive;
-    animation: flicker 1.5s infinite alternate;   
-}
+
 
 @keyframes flicker {
     
